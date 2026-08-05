@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Ornglobal</title>
+  <script>
+    var pathnameParts = window.location.pathname.split('/');
+    var lastPart = pathnameParts[pathnameParts.length - 1];
+    if (lastPart !== '' && !lastPart.includes('.')) {
+      var redirect = '/ornglobal/?' + pathnameParts.slice(3).join('/');
+      sessionStorage.redirect = redirect;
+      history.replaceState(null, null, '/ornglobal/');
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/ornglobal/src/main.jsx"></script>
+</body>
+</html>
