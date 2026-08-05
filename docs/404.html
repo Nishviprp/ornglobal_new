@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ornglobal</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // GitHub Pages serves this file for any path that isn't a real file
+      // (e.g. a deep link like /ornglobal_new/dashboard). It re-encodes the
+      // requested path into a query string and redirects back to the real
+      // entry point, where the matching script in index.html restores it
+      // before React Router reads the URL.
+      var pathSegmentsToKeep = 1; // keep "/ornglobal_new"
+
+      var location = window.location;
+      var segments = location.pathname.split('/').slice(1);
+      var redirectPath = segments.slice(0, pathSegmentsToKeep).join('/');
+      var remainingPath = segments.slice(pathSegmentsToKeep).join('/');
+
+      location.replace(
+        location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+        '/' + redirectPath + '/?/' + remainingPath.replace(/&/g, '~and~') +
+        (location.search ? '&' + location.search.slice(1).replace(/&/g, '~and~') : '') +
+        location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -19,7 +19,7 @@ function ForgotPasswordModal({ initialEmail = '', onClose }) {
     setError('')
     setSending(true)
     const { error: resetError } = await supabaseClient.auth.resetPasswordForEmail(trimmedEmail, {
-      redirectTo: `${window.location.origin}/ornglobal/reset-password`,
+      redirectTo: `${window.location.origin}/ornglobal_new/reset-password`,
     })
     setSending(false)
 

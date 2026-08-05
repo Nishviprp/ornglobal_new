@@ -5,7 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/ornglobal_new/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ornglobal</title>
-    <script type="module" crossorigin src="/ornglobal_new/assets/index-BhgT9hZk.js"></script>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // Restores the real path that 404.html encoded into the query string,
+      // before React Router reads window.location.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
+    <script type="module" crossorigin src="/ornglobal_new/assets/index-Bu6Yzg0Z.js"></script>
     <link rel="stylesheet" crossorigin href="/ornglobal_new/assets/index-DqHy1WKU.css">
   </head>
   <body>
